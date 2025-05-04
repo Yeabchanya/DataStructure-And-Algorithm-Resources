@@ -34,4 +34,45 @@ public class LinkedList {
 		System.out.println("null");
 	}
 
+	// insert First
+	public void addFirst(int data) {
+		Node newNode = new Node(data);
+		newNode.next = head;
+		head = newNode;
+
+	}
+
+	// addLast
+	public void addLast(int data) {
+
+		Node newNode = new Node(data); // create new node
+		Node lastNode = head;
+
+		// find last node
+		while (lastNode.next != null) {
+			lastNode = lastNode.next;
+		}
+
+		lastNode.next = newNode;
+	}
+
+	// add Middle
+	public void addAffer(int data, int previousData) {
+
+		Node currentNode = head;
+
+		// Find current node
+		while (currentNode != null && currentNode.data != previousData) {
+			currentNode = currentNode.next;
+		}
+
+		if (currentNode == null) {
+			System.out.println("node null =" + previousData);
+			return;
+		}
+		//
+		Node newNode = new Node(data); // create new node
+		newNode.next = currentNode.next;
+		currentNode.next = newNode;
+	}
 }

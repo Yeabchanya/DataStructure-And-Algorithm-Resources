@@ -9,6 +9,14 @@ public class Application {
 		linkedList.append(20);
 		linkedList.append(30);
 		
+		
+		linkedList.addFirst(00);;
+		linkedList.addLast(40);
+		linkedList.append(50);
+		
+		linkedList.printList();
+		
+		linkedList.addAffer(11, 20);
 		linkedList.printList();
 	}
 
